@@ -34,4 +34,12 @@ function saveData() {
 function showTask() {
   listContainer.innerHTML = localStorage.getItem("data");
 }
+
+// Add event listener for "Enter" key press
+inputBox.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    addTask();
+  }
+});
+
 showTask();
